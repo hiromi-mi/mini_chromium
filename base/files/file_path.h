@@ -138,6 +138,7 @@ class FilePath {
 
   typedef StringType::value_type CharType;
 
+
   // Null-terminated array of separators used to separate components in
   // hierarchical paths.  Each character in this array is a valid separator,
   // but kSeparators[0] is treated as the canonical separator and will be used

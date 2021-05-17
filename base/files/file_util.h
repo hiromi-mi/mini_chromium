@@ -11,9 +11,16 @@
 
 #include <sys/types.h>
 
+#include "base/files/file.h"
+#include "base/files/file_path.h"
+#include "base/check.h"
+
 namespace base {
 
 bool ReadFromFD(int fd, char* buffer, size_t bytes);
+int WriteFile(const FilePath& filename, const char* data, int size);
+bool AllocateFileRegion(File* file, int64_t offset, size_t size);
+bool WriteFileDescriptor(const int fd, const char* data, int size);
 
 }  // namespace base
 

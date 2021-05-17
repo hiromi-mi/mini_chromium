@@ -285,6 +285,8 @@ void FilePath::StripTrailingSeparatorsInternal() {
   }
 }
 
+// courgette_tool.cc: InsertBeforeExtensionASCII
+
 }  // namespace base
 
 void PrintTo(const base::FilePath& path, std::ostream* out) {

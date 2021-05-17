@@ -16,9 +16,14 @@ static_library("base") {
     "compiler_specific.h",
     "debug/alias.cc",
     "debug/alias.h",
+    "files/file.cc",
+    "files/file.h",
     "files/file_path.cc",
     "files/file_path.h",
     "files/file_util.h",
+    "files/memory_mapped_file.h",
+    "files/memory_mapped_file.cc",
+    "files/memory_mapped_file_posix.cc",
     "files/scoped_file.cc",
     "files/scoped_file.h",
     "format_macros.h",
@@ -71,6 +76,20 @@ static_library("base") {
     "third_party/icu/icu_utf.h",
     "threading/thread_local_storage.cc",
     "threading/thread_local_storage.h",
+
+# Added
+    "callback.h",
+    "callback_internal.h",
+    "callback_internal.cc",
+    "callback_helpers.h",
+    "callback_helpers.cc",
+
+# Added
+    "files/file_posix.cc",
+    "environment.cc",
+
+# Added
+    "command_line.h",
   ]
 
   if (mini_chromium_is_posix || mini_chromium_is_fuchsia) {
